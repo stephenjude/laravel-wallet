@@ -77,8 +77,8 @@ The `InvalidAmountException` is thrown whenever the deposit or withdrawal amount
 #### InsufficientFundException
 The `InsufficientFundException` is thrown whenever the withdrawal amount is less than the user's wallet balance.
 
-### Alternative
-If you are 
+### Alternative Package
+If you are looking for somthing much bigger and elaborate checkout [Bavix Laravel Wallet](https://bavix.github.io/laravel-wallet/#/).
 
 ## Testing
 
