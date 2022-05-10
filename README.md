@@ -1,22 +1,11 @@
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
-
-# A simple wallet implementation for Laravel projects
+# Laravel Wallet
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/stephenjude/wallet.svg?style=flat-square)](https://packagist.org/packages/stephenjude/wallet)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/stephenjude/wallet/run-tests?label=tests)](https://github.com/stephenjude/wallet/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/stephenjude/wallet/Check%20&%20fix%20styling?label=code%20style)](https://github.com/stephenjude/wallet/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/stephenjude/wallet.svg?style=flat-square)](https://packagist.org/packages/stephenjude/wallet)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/wallet.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/wallet)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+A simple wallet implementation for Laravel.
 
 ## Installation
 
@@ -33,31 +22,60 @@ php artisan vendor:publish --tag="wallet-migrations"
 php artisan migrate
 ```
 
-You can publish the config file with:
+[//]: # ()
 
-```bash
-php artisan vendor:publish --tag="wallet-config"
-```
+[//]: # (```bash)
 
-This is the contents of the published config file:
+[//]: # (php artisan vendor:publish --tag="wallet-config")
 
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="wallet-views"
-```
+[//]: # (```)
 
 ## Usage
 
+### Prepare User Model
+
 ```php
-$wallet = new Stephenjude\Wallet();
-echo $wallet->echoPhrase('Hello, Stephenjude!');
+
+use Stephenjude\Wallet\Interfaces\Wallet;
+use Stephenjude\Wallet\Traits\HasWallet;
+
+class User extends Authenticatable implements Wallet
+{
+    use HasWallet;
+}
 ```
+
+### Deposit
+
+```php
+$user = User::first();
+
+$user->deposit(200.22); // returns the wallet balance: 200.22
+
+$user->deposit(200); // returns the wallet balance: 400.22
+```
+
+### Withdraw
+```php
+$user->withdraw(200); // returns the wallet balance: 200.22
+
+$user->withdraw(0.22); // returns the wallet balance: 200
+```
+
+### Balance
+
+```php
+$user->balance
+
+$user->wallet_balance
+```
+
+### Exeptions
+#### InvalidAmountException
+The `InvalidAmountException` is thrown whenever the deposit or withdrawal amount is a negative numeric value or zero.
+
+#### InsufficientFundException
+The `InsufficientFundException` is thrown whenever the withdrawal amount is less than the user's wallet balance.
 
 ## Testing
 

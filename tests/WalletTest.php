@@ -14,9 +14,11 @@ test('migration has added wallet_balance column to users table', function () {
 test('user can deposit fund', function () {
     $user =  User::factory()->create();
 
+    $user->deposit(200.22);
+
     $user->deposit(200);
 
-    expect($user->wallet_balance)->toBe(200);
+    expect($user->wallet_balance)->toBe(400.22);
 });
 
 test('user can withdraw fund', function () {
@@ -26,7 +28,9 @@ test('user can withdraw fund', function () {
 
     $user->withdraw(150);
 
-    expect($user->wallet_balance)->toBe(50);
+    $user->withdraw(0.5);
+
+    expect($user->wallet_balance)->toBe(49.5);
 });
 
 test('deposit invalid amount should throw exception', function () {
