@@ -1,12 +1,12 @@
 {
-    "name": "stephenjude/wallet",
+    "name": "stephenjude/laravel-wallet",
     "description": "A simple wallet implementation for Laravel",
     "keywords": [
         "stephenjude",
         "laravel",
         "wallet"
     ],
-    "homepage": "https://github.com/stephenjude/wallet",
+    "homepage": "https://github.com/stephenjude/laravel-wallet",
     "license": "MIT",
     "authors": [
         {
