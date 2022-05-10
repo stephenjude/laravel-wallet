@@ -30,7 +30,7 @@
     "autoload": {
         "psr-4": {
             "Stephenjude\\Wallet\\": "src",
-            "Stephenjude\\Wallet\\Database\\Factories\\": "database/factories"
+            "Stephenjude\\Wallet\\Tests\\Database\\Factories\\": "tests/database/factories"
         }
     },
     "autoload-dev": {

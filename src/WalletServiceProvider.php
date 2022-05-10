@@ -4,7 +4,6 @@ namespace Stephenjude\Wallet;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Stephenjude\Wallet\Commands\WalletCommand;
 
 class WalletServiceProvider extends PackageServiceProvider
 {
