@@ -8,12 +8,8 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('migration_table_name_table', function (Blueprint $table) {
-            $table->id();
-
-            // add fields
-
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->decimal("wallet_balance", 16, 2)->default(0);
         });
     }
 };

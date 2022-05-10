@@ -1,46 +1,41 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "stephenjude/wallet",
+    "description": "A simple wallet implementation for Laravel",
     "keywords": [
-        ":vendor_name",
+        "stephenjude",
         "laravel",
-        ":package_slug"
+        "wallet"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/stephenjude/wallet",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "stephenjude",
+            "email": "stephenjudesuccess@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.0",
         "spatie/laravel-package-tools": "^1.9.2",
-        "illuminate/contracts": "^9.0"
+        "illuminate/contracts": "^8.0"
     },
     "require-dev": {
-        "nunomaduro/collision": "^6.0",
-        "nunomaduro/larastan": "^2.0.1",
-        "orchestra/testbench": "^7.0",
+        "nunomaduro/collision": "^5.0",
+        "orchestra/testbench": "^6.0",
         "pestphp/pest": "^1.21",
         "pestphp/pest-plugin-laravel": "^1.1",
-        "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "phpunit/phpunit": "^9.5",
-        "spatie/laravel-ray": "^1.26"
+        "phpunit/phpunit": "^9.0"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Stephenjude\\Wallet\\": "src",
+            "Stephenjude\\Wallet\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Stephenjude\\Wallet\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,15 +44,18 @@
         "test-coverage": "vendor/bin/pest --coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Stephenjude\\Wallet\\WalletServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "Wallet": "Stephenjude\\Wallet\\Facades\\Wallet"
             }
         }
     },

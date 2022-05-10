@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Stephenjude\Wallet\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class WalletCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'wallet';
 
     public $description = 'My command';
 
