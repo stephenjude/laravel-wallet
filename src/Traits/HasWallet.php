@@ -45,7 +45,7 @@ trait HasWallet
 
     public function balance(): Attribute
     {
-        return Attribute::get(fn() => $this->wallet_balance ?? 0);
+        return Attribute::get(fn () => $this->wallet_balance ?? 0);
     }
 
     public function throwExceptionIfAmountIsInvalid(int|float $amount): void
@@ -57,10 +57,8 @@ trait HasWallet
 
     public function throwExceptionIfFundIsInsufficient(int|float $amount): void
     {
-        if (!$this->canWithdraw($amount)) {
+        if (! $this->canWithdraw($amount)) {
             throw new InsufficientFundException();
         }
     }
 }
-
-
