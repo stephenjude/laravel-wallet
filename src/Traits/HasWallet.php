@@ -8,7 +8,7 @@ use Stephenjude\Wallet\Exceptions\InvalidAmountException;
 
 trait HasWallet
 {
-    protected string $walletColumnName = 'balance';
+    protected string $walletColumnName = 'wallet_balance';
 
     protected function getBalanceValue(): float|int
     {
