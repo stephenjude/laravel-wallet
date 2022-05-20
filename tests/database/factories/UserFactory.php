@@ -8,8 +8,14 @@ use Stephenjude\Wallet\Tests\Models\User;
 
 class UserFactory extends Factory
 {
-    protected $model = User::class;
+    /**
+     * @var string
+     */
+    protected string $model = User::class;
 
+    /**
+     * @return array
+     */
     public function definition(): array
     {
         return [

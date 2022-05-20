@@ -13,13 +13,22 @@ class User extends Authenticatable implements Wallet
     use HasFactory;
     use HasWallet;
 
+    /**
+     * @var array
+     */
     protected $guarded = [];
 
+    /**
+     * @var string[]
+     */
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
+    /**
+     * @return mixed
+     */
     protected static function newFactory()
     {
         return UserFactory::new();
