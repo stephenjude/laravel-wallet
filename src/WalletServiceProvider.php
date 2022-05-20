@@ -7,6 +7,11 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class WalletServiceProvider extends PackageServiceProvider
 {
+    /**
+     * @param Package $package
+     *
+     * @return void
+     */
     public function configurePackage(Package $package): void
     {
         /*

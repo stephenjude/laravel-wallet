@@ -8,6 +8,12 @@ use Stephenjude\Wallet\Exceptions\InvalidAmountException;
 
 trait HasWallet
 {
+    /**
+     * @param int|float $amount
+     *
+     * @return float|int
+     * @throws InvalidAmountException
+     */
     public function deposit(int|float $amount): float|int
     {
         $this->throwExceptionIfAmountIsInvalid($amount);
@@ -21,6 +27,13 @@ trait HasWallet
         return $balance;
     }
 
+    /**
+     * @param int|float $amount
+     *
+     * @return float|int
+     * @throws InsufficientFundException
+     * @throws InvalidAmountException
+     */
     public function withdraw(int|float $amount): float|int
     {
         $this->throwExceptionIfAmountIsInvalid($amount);
@@ -34,6 +47,12 @@ trait HasWallet
         return $balance;
     }
 
+    /**
+     * @param int|float $amount
+     *
+     * @return bool
+     * @throws InvalidAmountException
+     */
     public function canWithdraw(int|float $amount): bool
     {
         $this->throwExceptionIfAmountIsInvalid($amount);
@@ -43,11 +62,20 @@ trait HasWallet
         return $balance >= $amount;
     }
 
+    /**
+     * @return Attribute
+     */
     public function balance(): Attribute
     {
-        return Attribute::get(fn () => $this->wallet_balance ?? 0);
+        return Attribute::get(fn() => $this->wallet_balance ?? 0);
     }
 
+    /**
+     * @param int|float $amount
+     *
+     * @return void
+     * @throws InvalidAmountException
+     */
     public function throwExceptionIfAmountIsInvalid(int|float $amount): void
     {
         if ($amount <= 0) {
@@ -55,9 +83,16 @@ trait HasWallet
         }
     }
 
+    /**
+     * @param int|float $amount
+     *
+     * @return void
+     * @throws InsufficientFundException
+     * @throws InvalidAmountException
+     */
     public function throwExceptionIfFundIsInsufficient(int|float $amount): void
     {
-        if (! $this->canWithdraw($amount)) {
+        if (!$this->canWithdraw($amount)) {
             throw new InsufficientFundException();
         }
     }
