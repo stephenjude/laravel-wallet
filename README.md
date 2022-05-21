@@ -70,7 +70,7 @@ $user->balance
 $user->wallet_balance
 ```
 
-### Exeptions
+### Exceptions
 #### InvalidAmountException
 The `InvalidAmountException` is thrown whenever the deposit or withdrawal amount is a negative numeric value or zero.
 
