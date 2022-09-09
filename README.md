@@ -7,6 +7,11 @@
 
 A simple wallet implementation for Laravel.
 
+## Learn More
+- [A Simple Wallet Implementation for Laravel - Laravel News](https://laravel-news.com/laravel-wallet)
+- [Interfaces and Traits: How to Use Them in Laravel Packages - Laravel Daily](https://www.youtube.com/watch?v=s2vF84rSaEA)
+- [Laravel Virtual Wallet with Coupons: 3 Packages Demo - Laravel Daily](https://www.youtube.com/watch?v=Rgu7iEpXRFM&t=44s)
+
 ## Installation
 
 You can install the package via composer:
