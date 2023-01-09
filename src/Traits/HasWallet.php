@@ -12,13 +12,9 @@ trait HasWallet
     {
         $this->throwExceptionIfAmountIsInvalid($amount);
 
-        $balance = $this->wallet_balance ?? 0;
+        $this->increment('wallet_balance', $amount);
 
-        $balance += $amount;
-
-        $this->forceFill(['wallet_balance' => $balance])->save();
-
-        return $balance;
+        return $this->wallet_balance;
     }
 
     public function withdraw(int|float $amount): float|int
@@ -27,11 +23,9 @@ trait HasWallet
 
         $this->throwExceptionIfFundIsInsufficient($amount);
 
-        $balance = $this->wallet_balance - $amount;
+        $this->decrement('wallet_balance', $amount);
 
-        $this->forceFill(['wallet_balance' => $balance])->save();
-
-        return $balance;
+        return $this->wallet_balance;
     }
 
     public function canWithdraw(int|float $amount): bool
