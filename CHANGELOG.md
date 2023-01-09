@@ -2,6 +2,10 @@
 
 All notable changes to `wallet` will be documented in this file.
 
+## 0.0.6 - 2023-01-09
+
+- Deposit and withdrawal database optimization using Laravel ORM increment and decrement methods - #12
+
 ## 0.0.5 - 2022-07-04
 
 - Bump dependabot/fetch-metadata from 1.3.1 to 1.3.3 #9
