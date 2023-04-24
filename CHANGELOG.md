@@ -2,6 +2,10 @@
 
 All notable changes to `wallet` will be documented in this file.
 
+## 1.0.0 - 2023-04-24
+
+- Laravel 10 support
+
 ## 0.0.7 - 2023-01-30
 
 - Bump dependabot/fetch-metadata from 1.3.5 to 1.3.6
