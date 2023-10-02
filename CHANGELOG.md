@@ -2,6 +2,10 @@
 
 All notable changes to `wallet` will be documented in this file.
 
+## 1.0.1 - 2023-10-02
+
+- Bump actions/checkout from 3 to 4 #18
+
 ## 1.0.0 - 2023-04-24
 
 - Laravel 10 support
