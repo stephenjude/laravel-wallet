@@ -2,6 +2,10 @@
 
 All notable changes to `wallet` will be documented in this file.
 
+## 2.0.1 - 2025-01-27
+
+- Bump dependabot/fetch-metadata from 2.2.0 to 2.3.0 in #28
+
 ## 2.0.0 - 2024-07-15
 
 - Laravel 11 support by @xabdulhady
