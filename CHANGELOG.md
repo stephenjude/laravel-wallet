@@ -2,6 +2,15 @@
 
 All notable changes to `wallet` will be documented in this file.
 
+## 2.0.2 - 2025-06-16
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.3.0 to 2.4.0 by @dependabot in https://github.com/stephenjude/laravel-wallet/pull/29
+* Bump stefanzweifel/git-auto-commit-action from 5 to 6 by @dependabot in https://github.com/stephenjude/laravel-wallet/pull/30
+
+**Full Changelog**: https://github.com/stephenjude/laravel-wallet/compare/2.0.1...2.0.2
+
 ## 2.0.1 - 2025-01-27
 
 - Bump dependabot/fetch-metadata from 2.2.0 to 2.3.0 in #28
