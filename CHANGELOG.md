@@ -2,6 +2,14 @@
 
 All notable changes to `wallet` will be documented in this file.
 
+## 2.0.4 - 2025-10-13
+
+### What's Changed
+
+* Bump stefanzweifel/git-auto-commit-action from 6 to 7 by @dependabot[bot] in https://github.com/stephenjude/laravel-wallet/pull/32
+
+**Full Changelog**: https://github.com/stephenjude/laravel-wallet/compare/2.0.3...2.0.4
+
 ## 2.0.3 - 2025-08-18
 
 ### What's Changed
