@@ -2,6 +2,16 @@
 
 All notable changes to `wallet` will be documented in this file.
 
+## 2.0.5 - 2026-03-30
+
+### What's Changed
+
+* Bump actions/checkout from 5 to 6 by @dependabot[bot] in https://github.com/stephenjude/laravel-wallet/pull/33
+* Bump dependabot/fetch-metadata from 2.4.0 to 2.5.0 by @dependabot[bot] in https://github.com/stephenjude/laravel-wallet/pull/34
+* Bump dependabot/fetch-metadata from 2.5.0 to 3.0.0 by @dependabot[bot] in https://github.com/stephenjude/laravel-wallet/pull/35
+
+**Full Changelog**: https://github.com/stephenjude/laravel-wallet/compare/2.0.4...2.0.5
+
 ## 2.0.4 - 2025-10-13
 
 ### What's Changed
