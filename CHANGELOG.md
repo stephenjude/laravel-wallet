@@ -2,6 +2,19 @@
 
 All notable changes to `wallet` will be documented in this file.
 
+## 3.0.0 - 2026-05-31
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 3.0.0 to 3.1.0 by @dependabot[bot] in https://github.com/stephenjude/laravel-wallet/pull/36
+* Add support for Laravel 12 and 13 by @stephenjude in https://github.com/stephenjude/laravel-wallet/pull/37
+
+### New Contributors
+
+* @stephenjude made their first contribution in https://github.com/stephenjude/laravel-wallet/pull/37
+
+**Full Changelog**: https://github.com/stephenjude/laravel-wallet/compare/2.0.5...3.0.0
+
 ## 2.0.5 - 2026-03-30
 
 ### What's Changed
