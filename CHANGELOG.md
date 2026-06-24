@@ -2,6 +2,14 @@
 
 All notable changes to `wallet` will be documented in this file.
 
+## 3.0.1 - 2026-06-24
+
+### What's Changed
+
+* Bump actions/checkout from 6 to 7 by @dependabot[bot] in https://github.com/stephenjude/laravel-wallet/pull/38
+
+**Full Changelog**: https://github.com/stephenjude/laravel-wallet/compare/3.0.0...3.0.1
+
 ## 3.0.0 - 2026-05-31
 
 ### What's Changed
